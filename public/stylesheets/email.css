@@ -1,0 +1,28 @@
+body{margin-top: 5%;}
+.container {
+    height: 500px;
+    margin: 0 auto;
+    width: 40%;
+    background-color:rgba(255, 255, 255, 0.753);
+    border-radius: 5px;
+    padding: 10px;}
+
+.msg {
+    width: 300px;
+    height: 200px;
+    margin-left: 50px;
+    background-color: white;
+    overflow: scroll;
+}
+
+.submit{background-color:cornflowerblue;
+        /* height: 10px; */
+        padding: 5px;
+        border-radius: 5px;
+        margin: 0 auto;
+        display: block;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        border-style: outset;
+        border: 5px ;
+
+         }
