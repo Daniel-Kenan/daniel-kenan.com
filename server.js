@@ -6,7 +6,7 @@ const {
     exec
 } = require('child_process');
 const app = express();
-const PORT = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 app.use(express.static('public'));
 app.use(express.urlencoded({
     extended: false
@@ -29,4 +29,4 @@ app.post('/new-message', (req, res) => {
         console.log(stdout)
     })
 })
-app.listen(PORT) ; 
+app.listen(port) ; 
