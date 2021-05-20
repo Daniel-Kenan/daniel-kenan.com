@@ -27,8 +27,8 @@ app.use('/users', usersRouter);
 const {
   exec
 } = require('child_process');
-const app = express();
-const port = process.env.PORT || 3000
+// const app = express();
+// const port = process.env.PORT || 3000
 app.use(express.static('public'));
 app.use(express.urlencoded({
   extended: false
