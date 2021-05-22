@@ -1,12 +1,18 @@
 from mailer import Mailer
 from sys import argv
-import os
+from passwords import *
 
-_password_ = os.environ.get('passwordportfolio')
+user = {
+  'email' : argv[1][0] ,
+  'message' : argv[2][0] ,
+  'name' : argv[3][0]
+}
+
+msg = f"{user.name}\n{user.message}"
 
 try :
-  mail = Mailer(email='sdanieldeveloper@gmail.com', password=_password_)
-  mail.send(receiver='accdemo44@gmail.com', subject=argv[1], message=argv[2])
+  mail = Mailer(email=DEV_EMAIL, password = PASSWORD)
+  mail.send(receiver=RECEIVER_EMAIL, subject = user.email, message=msg)
   print("Email Sent")
 except:
     print('EMAIL NOT SENT')

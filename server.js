@@ -18,10 +18,10 @@ app.get('/mail',(req , res)=>{
     res.sendFile(__dirname+'/email.html')
 })
 app.post('/new-message', (req, res) => {
-    let email = req.body.email;
-    let msg = req.body.message;
-
-    exec(`python ${__dirname}/email-bridge.py ${email} ${msg}`, (err, stdout) => {
+    let email = [req.body.email];
+    let msg = [req.body.message];
+    let user_name = [req.body.username]
+    exec(`python ${__dirname}/email-bridge.py ${email} ${msg} ${user_name}`, (err, stdout) => {
         if (err) {
             console.log(err);
             return
