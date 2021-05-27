@@ -1,11 +1,5 @@
 import os
 
-try:
-  from mailer import Mailer
-except :
-  os.system('pip install quick-mailer')
-
-
 from mailer import Mailer
 from sys import argv
 from passwords import *

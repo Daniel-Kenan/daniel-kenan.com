@@ -1,0 +1,1 @@
+quick-mailer==0.1.0
