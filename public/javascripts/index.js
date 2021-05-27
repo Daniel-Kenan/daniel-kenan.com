@@ -1,6 +1,6 @@
-let homename = document.getElementsByClassName('name')[0];
-str = '';
-let i = 0;
+let homename = document.getElementsByClassName('name')[0],
+    str = '',
+    i = 0;
 
 let msg = ["I am a Strategist    ", "I am passionate   ", "I am a Software Engineer   ", "I am Daniel Kenan Slinda    "]
 let interval = setInterval(type, 200)
@@ -28,13 +28,26 @@ setInterval(() => {
     }
 }, 500)
 
-let header = document.getElementsByClassName('header')[0] ;
+let header = document.getElementsByClassName('header')[0];
 header.style.width = "100vh";
 
-onscroll = () =>{
-   if (document.documentElement.scrollTop > 150){
-    // header.style.display = "none";
-   }
-   else{}
+onscroll = () => {
+    if (document.documentElement.scrollTop > 150) {
+        // header.style.display = "none";
+    } else {}
 }
 
+let val_ = 0;
+
+function menu() {
+    ++val_
+    let icons = document.getElementsByClassName('query')[0];
+    // alert(val_)
+    if (val_ == 1) {
+        icons.style.display = "none";
+        return
+    }
+    icons.style.display = "block"
+    val_ = 0
+
+}
