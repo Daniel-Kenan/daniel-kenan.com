@@ -1,7 +1,9 @@
-:root{
+:root {
     --background-color: rgba(0, 0, 0, 0.719);
-    --font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --window-width: clamp(200px, 100%, 5000px);
 }
+
 * {
     box-sizing: border-box;
 }
@@ -21,18 +23,18 @@ body {
     top: 0;
     left: 0;
     background-color: var(--background-color);
-    height: 100vh;
-    width: 100%;
-    padding-top: 170px;
+    height: clamp(100px, 100px, 15%);
+    width: var(--window-width);
+    /* padding-top: 2vh; */
     display: none;
 }
 
 .img {
 
-    height: 200px;
-    width: 200px;
+    height: 29vh;
+    width: 28vh;
     left: 10%;
-    top: 20%;
+    top: 24%;
     position: absolute;
     border-radius: 50%;
 
@@ -41,10 +43,11 @@ body {
 
 
 .png {
-    height: 35px;
-    width: 35px;
-    margin-left: 8px;
-    margin: 10px 2px;
+    height: 40px;
+    width: 40px;
+    margin-left: 15vw;
+    /* margin: 10px 5vw; */
+    left: 88%;
 }
 
 .png:hover {
@@ -64,29 +67,35 @@ body {
     position: absolute;
     font-family: var(--font-family);
     color: white;
-    font-size: 3rem;
+    font-size: 200%;
     top: 25%;
-    left: 35%;
+    display: block;
+    margin-left: 30%;
+
+
 
 }
 
 .skills {
-    padding: 5px;
-    width: 100%;
-    height: 110vh;
+    width: 20vw;
+    height: 100vh;
     color: black;
     position: relative;
-    font-family: monospace;
+    font-family: var(--font-family);
     font-size: 1.5rem;
+    padding: 5vh;
+    font-size: 1rem;
+
 }
 
 
 
 #projects {
-    width: 90%;
+    width: 80%;
+    height: 70vh;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.801);
-    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    padding: 1.5vw;
     display: block;
     margin: 0 auto;
     color: white;
@@ -99,35 +108,39 @@ body {
 
 .projects {
     display: block;
-    min-height: 70vh;
-    width: 50vh;
+    min-height: 150px;
+    min-width: 50px;
     background-color: rgb(0, 153, 255);
     
-    margin: 2rem;
 }
 
 .content {
-    display: none;
+    opacity: 0;
     text-align: center;
-    padding-top: 23vh;
-    
+    font-size: 1.4vh;
+    display: block;
+    margin-top: -20vh;
+
 }
 
 .projects:hover>img {
-    display: none;
+    opacity: 0;
 }
 
-.projects > img {
+.projects>img {
     height: 100%;
     width: 100%;
 }
 
 .projects:hover>.content {
-    display: block;
+    opacity: 1;
+
 }
 
 .section {
     display: flex;
+    justify-content: space-around;
+    
 }
 
 .content h3 a {
@@ -159,8 +172,8 @@ body {
 
 #nav {
     display: block;
-    height: 50px;
-    width: 50px;
+    min-height: 40px;
+    max-height: 40px;
     top: 90%;
     left: 95%;
     border-radius: 50%;
@@ -171,20 +184,21 @@ body {
 
 .top-nav a {
     border: 1px white solid;
-    padding: 2px;
+    padding: 0.3vw;
+    font-size: small;
     border-radius: 4px;
     text-decoration: none;
     float: right;
-    margin: 9px 6px;
+    margin: 3vw 1.3vw;
     color: white;
     opacity: 0.5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family);
     transition: 0.8s;
 }
 
 .top-nav {
     padding: 2px 16px;
-    width: 100%;
+    width: var(--window-width);
     background-color: rgba(0, 0, 0, 0.719);
     height: 100vh;
     margin-bottom: -11.5px;
@@ -200,8 +214,8 @@ body {
 
 .skills-icon {
     position: absolute;
-    top: 120vh;
-    left: 120vh;
+    top: 105%;
+    left: 60%;
 }
 
 #about {
@@ -209,16 +223,21 @@ body {
     border: 2px rgb(0, 153, 255) solid;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 4px;
-    width: 90%;
+    width: 80%;
+    font-size: 100%;
     margin: 0 auto;
     box-shadow: 13px 7.5px rgb(1, 34, 56);
-    margin-bottom: 40vh;
+    margin-bottom: 15vh;
 }
 
 .footer {
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family);
     display: block;
     height: 20vh;
     background-color: var(--background-color);
+}
+
+progress {
+    width: clamp(10px,170px, 200px);
 }
