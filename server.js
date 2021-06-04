@@ -41,5 +41,7 @@ app.get('/blog/network',(req,res)=>{
 app.get('/blog/git', (req,res)=>{
     res.render('git')
 })
-
+app.get('/blog' , (req, res)=>{
+    res.render('blog');
+})
 app.listen(port);
