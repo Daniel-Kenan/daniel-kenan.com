@@ -14,7 +14,7 @@ app.use(express.urlencoded({
     extended: false
 }))
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+    res.render('index')
 })
 app.get('/mail', (req, res) => {
     res.sendFile(__dirname + '/email.html')
@@ -32,16 +32,18 @@ app.post('/new-message', (req, res) => {
     })
 })
 
-app.get('/blog/story', (req, res)=>{
-    res.render('story')
+app.get('/blog/:page', (req, res)=>{
+    let menu = req.query;
+    menu = Object.keys(menu).length == true ? true : false ;
+    
+    if (req.params.page == "story")  res.render('story',{menu:menu}); 
+    if (req.params.page == "git")  res.render('git',{menu:menu});
+    if (req.params.page == "network")  res.render('Networking4SoftwareEngineers',{menu:menu});
+    
 })
-app.get('/blog/network',(req,res)=>{
-    res.render('Networking4SoftwareEngineers')
-})
-app.get('/blog/git', (req,res)=>{
-    res.render('git')
-})
+    
 app.get('/blog' , (req, res)=>{
     res.render('blog');
 })
+
 app.listen(port);

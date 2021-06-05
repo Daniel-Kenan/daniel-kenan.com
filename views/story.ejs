@@ -10,8 +10,11 @@
 </head>
 
 <body>
-   <!-- <%- include('partials/header.ejs') %> -->
-    <h1>my path to programming </h1>
+    <% if(menu){ %>
+        <%- include('partials/header') %>
+    <% }
+    %>
+    <h1>My Path To Programming </h1>
     <div class="header">
         <img src="/images/80764195.jpg" height="70" width="70" style="border-radius: 50%;display: block;float: left;">
         <br>
@@ -82,7 +85,10 @@
     </div>
     <img src="/images/images (1).jpeg" width="850" height="400" style="margin-left: 0;">
     
-    <%- include('partials/footer.ejs') %>
+    <% if(menu){ %>
+        <%- include('partials/footer') %>
+    <% }
+    %>
 </body>
 
 </html>

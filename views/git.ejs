@@ -9,6 +9,10 @@
     <title>what is Git</title>
 </head>
 <body>
+    <% if(menu){ %>
+        <%- include('partials/header') %>
+    <% }
+    %>
     <h1>What is Git?</h1>
     <div class="content"><img src="/images/git-logo.png" width="450">
     <p>If you have been in software development for a while I am sure your wondering
@@ -36,7 +40,10 @@
   <pre>git add .</pre>
   <pre>git commit -M "initial commit"  <span class="comment"> commit message</span></pre>
 </div>
-     
+<% if(menu){ %>
+    <%- include('partials/footer') %>
+<% }
+%>
 </body>
 
 </html>

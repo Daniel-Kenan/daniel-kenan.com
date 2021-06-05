@@ -32,25 +32,6 @@ h1 {
     color: grey;
 }
 
-.footer {
-    display: block;
-    background-color: slategrey;
-    height: 15vw;
-    width: 100%;
-    padding: 5rem;
-    color: aliceblue;
-}
-
-.socials {
-    margin-left: 41%;
-
-}
-
-a img {
-    margin-left: 20px;
-    height: 30px;
-}
-
 pre {
     background-color: rgb(19, 18, 18);
     color: white;
@@ -60,32 +41,3 @@ pre {
     overflow: scroll;
 }
 
-.header-menu {
-    display: block;
-    /* background-color: brown; */
-    height: 70px;
-    width: 100%;
-    padding: 3px;
-    
-}
-
-.header-menu a {
-    color: black;
-    text-decoration: none;
-    float: right;
-    margin: 4px;
-    /* border: 0.5px solid black; */
-    border-radius: 5px;
-    padding: 2px;
-    font-weight: bolder;
-
-}
-
-.header-menu a:hover {
-    border-color: white;
-    /* background-color: black; */
-    color: slateblue;
-  
-    
-    /* background-color: slateblue; */
-}

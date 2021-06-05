@@ -11,13 +11,13 @@ class Query {
             if (this.readyState == 4 && this.status == 200) {
                 div.innerHTML = this.responseText;
                 div.addEventListener('click',()=>{
-                   location.href =  url ;
+                   location.href =  url +"?menu=true" ;
                 })
             }
         };
         xhttp.open("GET", url, true);
         xhttp.send();
-        // console.log(this.div)
+       
     }
 }
 new Query(0, "story").request()
