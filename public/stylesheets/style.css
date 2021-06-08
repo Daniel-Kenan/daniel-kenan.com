@@ -15,37 +15,18 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color:white;
 }
 
-.header {
-    top: 0;
-    left: 0;
-    background-color: var(--background-color);
-    height: clamp(100px, 100px, 15%);
-    width: var(--window-width);
-    /* padding-top: 2vh; */
-    display: none;
-}
-
-.img {
-
-    height: 29vh;
-    width: 28vh;
-    left: 10%;
-    top: 24%;
-    position: absolute;
-    border-radius: 50%;
-
-}
 
 .animate {
     letter-spacing: 1.4rem;
     overflow: hidden;
     text-align: center;
+    color: aliceblue;
     animation: glow 4s infinite;
     -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color:rgba(240, 248, 255, 0.952);
+    -webkit-text-stroke-color:rgba(0, 0, 0, 0.952);
    /* color: aliceblue; */
    font-size: xx-large;
 }
@@ -67,56 +48,10 @@ body {
     }
 }
 
-.png {
-    height: 40px;
-    width: 40px;
-    margin-left: 15vw;
-    /* margin: 10px 5vw; */
-    left: 88%;
-}
-
-.png:hover {
-    height: 40px;
-    width: 40px;
-}
-
-#mail {
-    width: 37px;
-}
-
-#mail:hover {
-    width: 43px;
-}
-
-.name {
-    position: absolute;
-    font-family: var(--font-family);
-    color: white;
-    font-size: 200%;
-    top: 25%;
-    display: block;
-    margin-left: 30%;
-
-
-
-}
-
-.skills {
-    width: 20vw;
-    height: 100vh;
-    color:white;
-    position: relative;
-    font-family: var(--font-family);
-    font-size: 1.5rem;
-    padding: 5vh;
-    font-size: 1rem;
-
-}
-
-
 .top-nav a {
-    border: 1px white solid;
+    border: 2px white solid;
     padding: 0.3vw;
+    font-weight: bolder;
     font-size: small;
     border-radius: 4px;
     text-decoration: none;
@@ -133,7 +68,7 @@ body {
     padding: 2px 16px;
     width: var(--window-width);
     background-color: black;
-    background-image: url('/images/ef2db0885d94fd149a4b7914923bb2a3.gif');
+    background-image: url('/images/Dan.jpg');
     /* backface-visibility: hidden; */
     background-position: center;
     background-repeat: no-repeat;
@@ -141,7 +76,7 @@ body {
     font-size: xx-large;
     height: 100vh;
     margin-bottom: -11.5px;
-    opacity: 0.7;
+    /* opacity: 0.7; */
 }
 
 .top-nav a:hover {
@@ -150,32 +85,37 @@ body {
     color: black;
 }
 
-.skills-icon {
-    position: absolute;
-    top: 110%;
-    left: 60%;
-}
-
-
-progress {
-    width: clamp(10px, 170px, 200px);
-}
 
 @media only screen and (max-width: 700px) {
     .header+img {
         display: none;
     }
 
-    .name {
-        margin-left: 2vw;
-        margin-top: 26vw;
-        font-size: xx-large;
-    }
     .skills > .animate{font-size: small;
     }
     .skills-icon {
-        top: 160vw;
-      
+        top: 160vw;      
     }
+    
+}
+.about{
+    display: block;
+    
+}
+.skills{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2.5fr 2.5fr 2.5fr;
+    grid-template-areas: "hcj hcj" "node heroku" "python git" "overview overview"
+}
 
+.skills img{display: block;}
+.skills p{
+    padding: 1rem 4rem;
+}
+.source-code{
+    color: purple;
+}
+.hosting{
+    color: chartreuse;
 }

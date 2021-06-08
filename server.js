@@ -16,6 +16,9 @@ app.use(express.urlencoded({
 app.get('/', (req, res) => {
     res.render('index')
 })
+app.get('/home', (req, res) => {
+    res.render('index')
+})
 app.get('/mail', (req, res) => {
     res.sendFile(__dirname + '/email.html')
 })

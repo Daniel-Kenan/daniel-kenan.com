@@ -36,8 +36,9 @@
 
 /* Content */
 .content {
-  background-color: aliceblue;
+  background-color: white;
   padding: 10px;
+  box-shadow: 2px 2px 2px 1px  black;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -54,8 +55,5 @@
     width: 100%;
   }
 
-  .content {
-    background-color: black;
-    color: aliceblue;
-  }
+  
 }

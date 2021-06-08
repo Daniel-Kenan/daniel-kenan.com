@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
     <link rel="stylesheet" href="/stylesheets/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,49 +19,43 @@
         <a href="/blog">BLOG</a>
         <div class="header">
         </div>
-        <img src="/images/80764195.jpg" alt=":-) Daniel" class="img">
-        </img>
-        <h1 class="name"> </h1>
+
+        <!-- <h1 class="name"> </h1> -->
     </div>
-<h1 class="animate">SKILLS</h1>
-    <div class="skills" id="skills">
-    
-        HTML5 <progress min="0" , max="100" , value="95"></progress><br>
-        <br>
-        CSS3 <progress min="0" , max="100" , value="87"></progress><br>
-        <br>
-        Javascript <progress min="0" , max="100" , value="90"></progress><br>
-        <br>
-        Nodejs <progress min="0" , max="100" , value="70"></progress><br>
-        <br>
-        python <progress min="0" , max="100" , value="70"></progress><br>
-        <br>
-        git <progress min="0" , max="100" , value="80"></progress><br>
-        <br>
-        C <progress min="0" , max="100" , value="60"></progress><br>
-        <br>
+
+    <h1 class="animate">ABOUT</h1>
+    <div class="about" id="about"></div>
+
+    <%- include('partials/me') %>
     </div>
-   
-    
-    <br><br><br><br><br>
-    <div class="skills-icon">
-        <br>
-        <img src="/images/pngkit_javascript-logo-png_803482.png" style="width: 20vw ; max-height:250px"><br>
-        <img src="/images/node.png" width="400" style="width: 30vw;max-height: 300px; "><br>
-        <!-- <img src="/images/kisspng-professional-python-programmer-computer-programmin-python-logo-download-5b47725c473774.6340274515314089882917.png" -->
-            <!-- style="max-width: 75px; max-height: 75px;"> -->
+    <h1 class="animate" id="skills">SKILLS</h1>
+    <br>
+    <div class="skills">
+        <img src="/images/pngkit_javascript-logo-png_803482.png" style="width: 40vw;max-height: 800px;grid-area: hcj;margin: auto;">
+        <img src="/images/node.png" width="400" style="width: 30vw;max-height: 300px; grid-area: node;">
+        <img src="/images/heroku.png" width="400" style="width: 30vw;max-height: 300px; grid-area: heroku;">
+        <img src="/images/python.png" width="200" style="width: 20vw;max-height: 300px; grid-area: python;">
+        <img src="/images/git-logo.png" width="400" style="width: 30vw;max-height: 300px; grid-area: git;">
+        <div class="overview" style="grid-area: overview;">
+             <h3 style="text-align: center;">Overview</h3>
+             <p>All my web applications are built with html javascript and the Nodejs's express with a xammpp apache and mysql database and these 
+                 are my enviromental tools. I edit photos using Gimp photo Editor and my IDEs are visual studio code and pycharm. The cloud platform I utiise is 
+                 heroku.  <span style="color: purple;font-weight: bolder;">I have basic knowledge of C programming and memory management and also basic knowledge of networking.</span>
+             </p>
+            </div>
+          
 
     </div>
-   
-    <h1 class="animate">PROJECTS</h1><br>
 
-   
-<br>
+    <h1 class="animate" id="projects">PROJECTS</h1><br>
+
+
+    <br>
     <%- include('partials/projects') %>
-    <%- include('partials/projects') %> 
+    <%- include('partials/projects1') %>
     <br><br> <br><br>
     <%- include('partials/footer') %>
-   
+
     <script src="/javascripts/index.js"></script>
 
 </body>

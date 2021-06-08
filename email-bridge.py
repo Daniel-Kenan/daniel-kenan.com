@@ -17,4 +17,4 @@ try :
   mail.send(receiver=RECEIVER_EMAIL, subject = user['email'], message=msg)
   print("Email Sent")
 except:
-    print('EMAIL NOT SENT')``
+    print('EMAIL NOT SENT')
