@@ -13,8 +13,10 @@
         <%- include('partials/header') %>
     <% }
     %>
-    <h1>What is Git?</h1>
-    <div class="content"><img src="/images/git-logo.png" width="450">
+<h1>What is Git?</h1>
+<div class="content">
+    
+    <img src="/images/git-logo.png" style="width: 40%;height: auto;">
     <p>If you have been in software development for a while I am sure your wondering
         you have heard this word before an your wondering what's the fuss about . Well prepare to be blown away.
         Git  is essential especially if your a fullstack developer.
@@ -34,11 +36,17 @@
       </ol>
 <h3>How does Git work?</h3>
 <p>Git tracks changes by taking snapshots of files and records the changes as stream of snapshots</p>
+  <p>First let's configure your local computer details </p>
+  <pre><span class="git">--config user.name <span class="string">"your username"</span></span>
 
-  <pre>git status   <span class="comment">displays modified files and files that are not commited</span></pre>
-  <pre>git add #filename  <span class="comment"></span> </pre>
-  <pre>git add .</pre>
-  <pre>git commit -M "initial commit"  <span class="comment"> commit message</span></pre>
+<span class="git">--config user.email <span class="string">"your email"</span></span>
+  </pre>
+  <pre><span class="git">status</span> <span class="comment">displays modified files and files that are not commited</span></pre>
+  
+  <pre><span class="git"> add index.html </span>   <span class="comment"> #filename</span> </pre>
+  <pre>$git add .</pre>
+  <pre>$git commit -M "initial commit"  <span class="comment"> commit message</span></pre>
+  
 </div>
 <% if(menu){ %>
     <%- include('partials/footer') %>

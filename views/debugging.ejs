@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/stylesheets/pages.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging js </title>
+</head>
+
+<body>
+    <% if(menu){ %>
+        <%- include('partials/header') %>
+    <% }
+    %>
+    <h1>Debugging javascript like a pro</h1>
+    <div class="content">
+        <img src="/images/download.png" alt="">
+        
+        <p>javascript can a nightmare to debug and refactor as the project grows larger and larger . But luckily I have
+            some great
+            tips for you to improve effiency and to be better organised so be prepared to be mesmerised and the way to
+            achieve that is to
+            use the console which you could acess it is messages from the developer settings in most browsers.</p>
+
+        <h3>The console</h3>
+        <p>console logging simply means to output data in javascript through the terminal or the browser's console.
+            You can console various types of data from strings to calculations and even javascript objects.
+         the console instance is configured to write to process.stdout and process stderror</p>
+
+        <pre>console.log('hello, world')  <span class="comment">//  hello, world</span></pre>
+        <p>You can also output data and also apply css styling to that data to make that data stand out but please note this works only on browsers .
+             </p>
+        <pre>console.log(' %c hello, world' , 'color : red' )  <span class="comment"> // <span style="color: red;">hello, world</span></span></pre>
+        <p>you can always console multiple objects without having to console log multiple times keeping your code organised
+            
+        </p>
+        <pre> <span class="const"></span>  a = { name  : <span class="string">'matthew'</span>  , surname : <span class="string">'example' </span> },
+           b = { name : <span class="string">'Daniel'</span>      , surname : <span class="string">'example'</span>  },
+           c = { name : <span class="string">'Christyn' </span> , surname : <span class="string">'example'</span> } ;
+            
+            console.log( { a, b , c } )
+        </pre>
+        <p>To prevent using undeclared variables as known as global variables make sure to use the javascript  strict mode at the
+            the beginning of your code . 
+        </p>
+        <pre> <span class="string">'use strict'</span></pre>
+
+        <p>use constant variables to prevent over-writing important variables</p>
+        <pre>
+           <span class="const"></span> variable = 10 ;
+             
+           variable = 20  <span class="comment">// throws an error</span> 
+        </pre>
+        <p>for a huge project that multiple testing you can now utilise console clear to clear the console and 
+            or console trace how many times a function is called.
+        </p>
+        <pre>console.clear()
+    console.trace()</pre>
+    <p>display warining messages to the console</p>
+        <pre>console.warn()</pre>
+        <p>sometimes you just want to console error message you can always use.</p>
+        <pre>console.error()</pre>
+    <p>Now you are debugging expert with javascript , program efficiently and crush those bugs . Happy coding. </p>
+    </div>
+=
+<% if(menu){ %>
+    <%- include('partials/footer') %>
+<% }
+%>
+</body>
+
+</html>

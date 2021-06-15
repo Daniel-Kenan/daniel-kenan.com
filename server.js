@@ -42,6 +42,7 @@ app.get('/blog/:page', (req, res)=>{
     if (req.params.page == "story")  res.render('story',{menu:menu}); 
     if (req.params.page == "git")  res.render('git',{menu:menu});
     if (req.params.page == "network")  res.render('Networking4SoftwareEngineers',{menu:menu});
+    if (req.params.page == "jspro")  res.render('debugging',{menu:menu});
     
 })
     

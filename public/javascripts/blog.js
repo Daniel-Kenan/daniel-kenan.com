@@ -23,3 +23,4 @@ class Query {
 new Query(0, "story").request()
 new Query(1, "network").request()
 new Query(2, "git").request()
+new Query(3, "jspro").request()

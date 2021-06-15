@@ -28,16 +28,52 @@ h1 {
     padding: 15px;
 }
 
+.content img {
+    width: 60%;
+    height: auto;
+}
+
+.content h1 {
+    font-size: large;
+}
+
 .comment {
     color: grey;
 }
 
 pre {
-    background-color: rgb(19, 18, 18);
+    background-color: rgb(12, 10, 10);
     color: white;
     display: block;
     width: 80%;
+    min-width: 100px;
+    max-width: 700px;
     padding: 15px;
     overflow: scroll;
 }
 
+q {
+   quotes: "`"  "`" "'" "'";
+}
+
+.string {
+    color: peru;
+}
+
+
+
+.const {
+    color: rgb(4, 87, 134);
+}
+
+.other {
+    color: aqua;
+}
+
+.const::after {
+    content: "const";
+}
+
+.git::before {
+    content: "$git ";
+}
