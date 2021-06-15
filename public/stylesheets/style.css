@@ -72,9 +72,9 @@ body {
     /* backface-visibility: hidden; */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 55vw;
+    background-size: 60vw;
     font-size: xx-large;
-    height: 100vh;
+    height: clamp(200px,100vw,700px);
     margin-bottom: -11.5px;
     /* opacity: 0.7; */
 }
@@ -114,23 +114,38 @@ body {
     padding: 1rem 4rem;
 }
 .source-code{
-    display: block;
-    width:50% ;
-    color: purple;
-    font-size: large;
-    font-weight: bolder;
-    text-decoration: none;
+    background-color: brown;
+
 }
 .source-code::after{
-    content: "Source Code";
+    content: "source code";
 }
 .hosting{
+    background-color:slateblue;
+   
+    
+}
+.hosting,.source-code{
+    color:white;
+    opacity: 0.8;
     width: 50%;
-    color: orange;
     display: block;
-    font-size: large;
-    font-weight: bolder;
+    padding: 2%;
+    border: 1px solid grey;
+    /* color: orange; */
+    display: block;
+    font-size: medium;
+    font-weight: bold;
     text-decoration: none;
+    
+}
+.hosting:hover , .source-code:hover{
+    /* background-color: slategray; */
+    opacity: 1;
+    
+}
+.hosting::after{
+    content: "visit site";
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -152,5 +167,5 @@ body {
 .content div{
    display: flex;
    width: 100% ;
-   background-color: black ;
+   /* background-color: black ; */
 }
