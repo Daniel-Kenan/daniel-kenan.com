@@ -4,6 +4,9 @@
 <head>
 
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/projects.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +15,7 @@
 
 <body>
 
-    <div class="top-nav">
+    <div class="top-nav" data-aos="zoom-in-down">
         <a href="#about">ABOUT</a>
         <a href="#projects">PROJECTS</a>
         <a href="#skills">SKILLS</a>
@@ -30,20 +33,24 @@
     </div>
     <h1 class="animate" id="skills">SKILLS</h1>
     <br>
-    <div class="skills">
-        <img src="/images/pngkit_javascript-logo-png_803482.png" style="width: 40vw;max-height: 800px;grid-area: hcj;margin: auto;">
-        <img src="/images/node.png" width="400" style="width: 30vw;max-height: 300px; grid-area: node;">
-        <img src="/images/heroku.png" width="400" style="width: 30vw;max-height: 300px; grid-area: heroku;">
-        <img src="/images/python.png" width="200" style="width: 20vw;max-height: 300px; grid-area: python;">
-        <img src="/images/git-logo.png" width="400" style="width: 30vw;max-height: 300px; grid-area: git;">
+    <div class="skills" data-aos="fade-left">
+        <img src="/images/pngkit_javascript-logo-png_803482.png"
+            style="width: 40vw;max-height: 800px;grid-area: hcj;margin: auto;">
+        <img src="/images/node.png" width="400" style="width: 28vw;max-height: 300px; grid-area: node;">
+        <img src="/images/heroku.png" width="400" style="width: 28vw;max-height: 300px; grid-area: heroku;">
+        <img src="/images/python.png" width="200" style="width: 18vw;max-height: 300px; grid-area: python;">
+        <img src="/images/git-logo.png" width="400" style="width: 28vw;max-height: 300px; grid-area: git;">
         <div class="overview" style="grid-area: overview;">
-             <h3 style="text-align: center;">Overview</h3>
-             <p>All my web applications are built with html javascript and the Nodejs's express with a xammpp apache and mysql database and these 
-                 are my enviromental tools. I edit photos using Gimp photo Editor and my IDEs are visual studio code and pycharm. The cloud platform I utiise is 
-                 heroku.  <span style="color: purple;font-weight: bolder;">I have basic knowledge of networking and intermediate python programming.</span>
-             </p>
-            </div>
-          
+            <h3 style="text-align: center;">Overview</h3>
+            <p>All my web applications are built with html javascript and the Nodejs's express with a xammpp apache and
+                mysql database and these
+                are my enviromental tools. I edit photos using Gimp photo Editor and my IDEs are visual studio code and
+                pycharm. The cloud platform I utiise is
+                heroku. <span style="color: purple;font-weight: bolder;">I have basic knowledge of networking and
+                    intermediate python programming.</span>
+            </p>
+        </div>
+
 
     </div>
 
@@ -52,11 +59,14 @@
     <br>
     <%- include('partials/projects') %>
     <%- include('partials/projects1') %>
-    <br><br> <br><br>
+    <br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br><br>
     <%- include('partials/footer') %>
 
     <script src="/javascripts/index.js"></script>
-
+   
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 
