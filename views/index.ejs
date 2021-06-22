@@ -16,19 +16,19 @@
 <body>
 
     <div class="top-nav" data-aos="zoom-in-down">
-        <a href="#about">ABOUT</a>
+        <a href="/blog">BLOG</a>
         <a href="#projects">PROJECTS</a>
         <a href="#skills">SKILLS</a>
-        <a href="/blog">BLOG</a>
+        <a href="#about">ABOUT</a>
         <div class="header">
         </div>
 
         <!-- <h1 class="name"> </h1> -->
     </div>
 
-    <h1 class="animate">ABOUT</h1>
+    
     <div class="about" id="about"></div>
-
+     <h1 class="animate">ABOUT</h1>
     <%- include('partials/me') %>
     </div>
     <h1 class="animate" id="skills">SKILLS</h1>
@@ -53,12 +53,17 @@
 
 
     </div>
-
-    <h1 class="animate" id="projects">PROJECTS</h1><br>
-
-    <br>
+<div class="projects">
+     <br><br><br>
+     <h1 class="animate" id="projects">PROJECTS</h1><br>
     <%- include('partials/projects') %>
     <%- include('partials/projects1') %>
+
+
+</div>
+    
+
+   
     <br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br><br>
     <%- include('partials/footer') %>
 

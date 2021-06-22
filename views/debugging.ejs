@@ -11,6 +11,19 @@
 
 <body>
     <% if(menu){ %>
+        <style>
+            @media screen and (min-width:900px) {
+                .content {
+                    display: block;
+                    margin: auto;
+                    width: 65%;
+                    height: auto;
+                }
+            }
+        </style>
+        <% }
+            %>
+    <% if(menu){ %>
         <%- include('partials/header') %>
     <% }
     %>

@@ -11,6 +11,19 @@
 
 <body>
     <% if(menu){ %>
+        <style>
+            @media screen and (min-width:900px) {
+                .content {
+                    display: block;
+                    margin: auto;
+                    width: 65%;
+                    height: auto;
+                }
+            }
+        </style>
+        <% }
+            %>
+    <% if(menu){ %>
         <%- include('partials/header') %>
     <% }
     %>
@@ -78,13 +91,11 @@
             with sololearn as a static page . I asked for help online then thanks to sololearn community I was helped
             in this period my depression got healed I started to read a lot and I started learning how and why do humans
             feel , what exactly is consciousness
-            I was a curious cat .
-
+            I was a curious cat. Up uto day I am still coding.
         </p>
 
     </div>
-    <img src="/images/images (1).jpeg" width="850" height="400" style="margin-left: 0;">
-    
+        <br><br><br>    
     <% if(menu){ %>
         <%- include('partials/footer') %>
     <% }

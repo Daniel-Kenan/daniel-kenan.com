@@ -10,27 +10,34 @@
 </head>
 <style>
     body{
-    background-image: url("/images/anete-lusina-zwsHjakE_iI-unsplash.jpg");
+    background-color: slategray;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+
+    }
+    .container{
+        display: block;
+        height: 80vh;
+        width: 50%;
     }
 </style>
 <body>
     <div class="container">
         <h2 style="text-align: center;">Fill IN THE FORM</h2>
         <br><br>
-     Name : <input type="text" required name="username">
+     Name : <input type="text" required name="username" style="width: 60%;">
         <br><br>
     <form action="/new-message" method="POST">
-     Your  Email: <input type="email" name="email" id="email" required> <br>
+     Your  Email: <input type="email" name="email" id="email" required style="width: 60%;"> <br>
      <br><br>
      Message: <br>
-     <div class="msg" contenteditable></div>
+     <div class="msg" contenteditable style="width: 60%;"></div>
      <br>
-     <input type="text" name="message" id="message" style="background-color: transparent;border: 0;color: transparent;width: 0%;" required>
+     <input type="text" name="message" id="message" style="background-color: transparent;border: 0;color: transparent;width: 0%;" required style="width: 60%;">
      <input type="submit" value="Submit" class="submit">
     </form>
+   <br><br><br>
     <script src="javascripts/email.js"></script>
     
 </div>
