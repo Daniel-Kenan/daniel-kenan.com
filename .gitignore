@@ -1,6 +1,6 @@
 .env
 /node_modules
 passwords.py
+folder
 /stylesheets
-npm-shrinkwrap.json
-gulpfile.json
+gulpfile.js
