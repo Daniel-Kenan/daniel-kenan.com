@@ -2,5 +2,5 @@
 /node_modules
 passwords.py
 /stylesheets
-shrink-wrap.json
+npm-shrinkwrap.json
 gulpfile.json
