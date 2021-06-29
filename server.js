@@ -19,22 +19,8 @@ app.get('/', (req, res) => {
 app.get('/home', (req, res) => {
     res.render('index')
 })
-app.get('/mail', (req, res) => {
-    res.sendFile(__dirname + '/email.html')
-})
-app.post('/new-message', (req, res) => {
-    let email = [req.body.email];
-    let msg = [req.body.message];
-    let user_name = [req.body.username];
-    exec(`python ${__dirname}/email-bridge.py ${email} ${msg} ${user_name}`, (err, stdout) => {
-        if (err) {
-            console.log(err);
-            return
-        }
-        console.log(stdout)
-    });
-    res.redirect('/')
-})
+
+
 
 app.get('/blog/:page', (req, res)=>{
     let menu = req.query;

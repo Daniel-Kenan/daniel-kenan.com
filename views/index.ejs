@@ -10,17 +10,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D.K Slinda</title>
+    <title>Daniel Kenan Slinda</title>
 </head>
 
 <body>
-
-    <div class="top-nav" data-aos="zoom-in-down">
-        <a href="/blog">BLOG</a>
-        <a href="#projects">PROJECTS</a>
+<div class="menu" data-aos="fade-left">
+     <a href="/blog">BLOG</a><a href="#projects">PROJECTS</a>
         <a href="#skills">SKILLS</a>
         <a href="#about">ABOUT</a>
+     
+    </div>       
+        
+    <div class="top-nav" data-aos="zoom-in-down">
+
         <div class="header">
+            <br><br>
+            <p>
+                <span class="animate" style="color: #2a9d8f;">I AM A CRE <span style="color: transparent; " class="animate">ATIVE...</span> </span> </p>
+                <p>
+                    <span class="animate"  style="color:#a2d2ff">I AM A CRE <span style="color: transparent; " class="animate">ATIVE...</span> </span> </p>
+                    <p>
+                        <span class="animate" style="color:#f4a261">I AM A CRE <span style="color: transparent; " class="animate">ATIVE...</span> </span> </p>
         </div>
 
         <!-- <h1 class="name"> </h1> -->
@@ -28,13 +38,18 @@
 
 
     <div class="about" id="about"></div>
-    <h1 class="animate">ABOUT</h1>
-    <%- include('partials/me') %>
+    <div data-aos="zoom-in-down" style="padding: 10px 0;width: 80%;margin: 0 auto;">
+
+        <p class="animate" style="color: #2a9d8f;"><span style="color: #f4a261" class="animate">HI,</span> I AM DANIEL</p>          
+        <img src="https://avatars.githubusercontent.com/u/80764195?v=4" style="display: block;margin: 0 auto;width:clamp(200px,40%,550px) ;height: auto;">
+        <br><br>
+        </div>        
+        <br> 
 
     <br>
     </div>
 
-    <div data-aos="fade-top" style="padding: 5px;">
+    <div data-aos="zoom-in-down" style="padding: 5px;background-color: white;width: 80%;margin: 0 auto;">
     
         <h1  id="skills" class="animate" >SKILLS</h1>
          <!-- <hr> -->
@@ -54,25 +69,63 @@
             <div><img src="/images/iconfinder-browserwindowwithstats-4417108_116626.png"  alt=""> <p>Analytical </p></div>
         </div>
     </div>
+<br><br>
+  <br>
 
-  
-
-    <div class="projects">
+    <div class="projects"  data-aos="zoom-in-up">
         <br><br><br>
-        <h1 class="animate" id="projects">PROJECTS</h1><br>
-        <%- include('partials/projects') %>
-        <%- include('partials/projects1') %>
+        <h1 class="animate" id="projects" >PROJECTS</h1>
+        <p style="text-align: center;">Here are a few design projects I've worked on recently. Want to see more? <span style="font-family: Dela Gothic one;color: #2a9d8f;cursor: pointer;" onclick="javascript:location.href = '#contact'">Contact Me.</span>
+            <br><br>
+            
+        <br>
+        <br>
+     <div class="col">
+         <img src="/images/portfolio.gif"> 
+         <div>
+            <a class="source-code" style="width: 100%;"></a>
+          
+         </div>
 
-
+     </div>
+    <div class="col">
+        <img src="images/racing.gif"> 
+        <div> <a class="source-code"></a>
+         <a class="hosting"></a>
+        </div>
     </div>
-
-
-
-    <br><br> <br><br><br><br><br><br><br><br> <br><br><br><br>
+    <div class="col">
+        <img src="images/construction.gif"> 
+        <div> <a class="source-code"></a>
+         <a class="hosting"></a>
+        </div>
+    </div>
+    <div class="col">
+        <img src="/images/curate.gif"> 
+        <div> <a class="source-code"></a>
+         <a class="hosting"></a>
+        </div>
+    </div>
+    <div class="col">
+        <img src="images/music.gif"> 
+        <div> <a class="source-code"></a>
+         <a class="hosting"></a>
+        </div>
+    </div> 
+    <div class="col">
+        <img src="images/music.gif"> 
+        <div> <a class="source-code"></a>
+         <a class="hosting"></a>
+        </div>
+    </div> 
+        <br><br><br><br><br><br><br><br> 
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <div class="ball"></div> 
     <%- include('partials/footer') %>
 
     <script src="/javascripts/index.js"></script>
-
+    <script src="/javascripts/scroll.js"></script>
     <script>
         AOS.init();
     </script>
