@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
-
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link href="/stylesheets/fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css">
-   
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta charset="UTF-8">
@@ -14,31 +16,36 @@
 </head>
 
 <body>
-<div class="menu" data-aos="fade-left">
+<div class="menu" >
      <a href="/blog">BLOG</a><a href="#projects">PROJECTS</a>
         <a href="#skills">SKILLS</a>
         <a href="#about">ABOUT</a>
-<!-- <hr style="position: fixed;">      -->
+        <img src="/images/t.png" onclick="home()">
+
     </div>       
         
     <div class="top-nav" data-aos="zoom-in-down">
 
         <div class="header">
             <br><br>
-          <img src="/images/1625255052-picsay.jpg" style="display: block;margin: 0 auto;width: auto;height: 50%;">
+          <img src="/images/1625255052-picsay.jpg" style="display: block;margin: 0 auto;width: auto;height: 50%;"  data-aos="fade-left">
           <br>
-        <p style="text-align: center;color: #f4a261;font-size: 20px;" class="animate">THIS IS THE PORTFOLIO OF <br> 
+        <p style="text-align: center;color: #f4a261;font-size: 20px;" class="animate" data-aos="fade-right">A FULLSTACK DEVELOPER<br> 
             <span style="color: #2a9d8f;" class="animate">DANIEL KENAN SLINDA </span> </p>
     </div>
     </div>
 <br>
 
     <div class="about" id="about"></div>
-    <div data-aos="zoom-in-down" style="padding: 10px 0;width: 80%;margin: 0 auto;">
-
-        <h1 class="animate" style="font-weight: bolder;color:#2a9d8f;font-size: x-large;">👋 I AM DANIEL</h1>       
-        <img src="https://avatars.githubusercontent.com/u/80764195?v=4" style="display: block;margin: 0 auto;width:clamp(200px,40%,550px) ;height: auto;">
-        <br><br>
+    <div data-aos="zoom-in-down" style="height: 100%;margin: 0 auto;background-color: rgb(240, 240, 240);display: flex;justify-content: center;align-items: center;">
+  <div>
+    <img src="https://avatars.githubusercontent.com/u/80764195?v=4" class="myself" >
+    <p style="text-align: center;font-weight: bold;"> 	&#128075 I specialise mostly in web development 
+        <br> but I can work with python too</p> 
+  </div>
+        <!-- <h1 class="animate" style="font-weight: bolder;">👋 LET US BUILD MAGIC TOGETHER 😁</h1>        -->
+          
+        <br>
         </div>        
         <br> 
 
@@ -72,59 +79,147 @@
         <br><br><br>
         <h1 class="animate" id="projects" >PROJECTS</h1>
         <p style="text-align: center;">Here are a few design projects I've worked on recently. Want to see more? <span style="font-family: Dela Gothic one;color: #2a9d8f;cursor: pointer;" onclick="javascript:location.href = '#contact'">Contact Me.</span>
-            <br><br>
-            
-        <br>
-        <br>
-     <div class="col">
-         <img src="/images/portfolio.gif"> 
-         <div>
-            <a href="https://github.com/Daniel-Kenan/My-portfolio.git" class="source-code" style="width: 100%;" target="_blank"></a>
-          
-         </div>
-     </div>
-     <div class="col">
-        <img src="/images/curate.gif"> 
-        <div> <a href="https://github.com/Daniel-Kenan/chef-site.git" class="source-code" target="_blank"></a>
-         <a href="http://chef-recipe.herokuapp.com" class="hosting" target="_blank"></a>
+<br><br><br>
+                      
+            <section style="position: relative;">
+                <ul>
+                    <li class="list active" data-filter="All">All</li>
+                    <li class="list" data-filter="javascript">JavaScript</li>
+                    <li class="list" data-filter="python">Python</li>                    
+                </ul>
+            </section>
+           
+    <div class="container gallery">
+        <div class="col items javascript" >
+            <img src="/images/Dan.jpg"> 
+            <div>
+               <!-- <a href="https://github.com/Daniel-Kenan/My-portfolio.git" class="source-code" style="width: 100%;" target="_blank"></a> -->
+             <h3 >Portfolio</h3>
+             <p>Well... your currently on this url , thank you for reviewing my portfolio</p>
+            </div>
         </div>
-    </div>
-    <div class="col">
-        <img src="images/eco.gif"> 
-        <div> <a href="https://github.com/Daniel-Kenan/Eco" class="source-code" target="_blank"></a>
-         <a href='https://ecosystem-3727a.web.app' class="hosting" target="_blank"></a>
-        </div>
+        <div class="col items javascript">
+           <img src="/images/curate.gif" class="curate"> 
+           <div>
+               <h3>Curate</h3>
+               <p>Pick Food and add to to wishlist , login and logout. Food based web Application</p> 
+               <!-- <a href="https://github.com/Daniel-Kenan/chef-site.git" class="source-code" target="_blank" style="width: 100%;"></a>
+            <a href="http://chef-recipe.herokuapp.com class="hosting" target="_blank" style="width: 100%;"></a> -->
+           </div>
+       </div>
+       <div class="col items javascript">
+           <img src="images/eco.gif" class="ecosystem"> 
+           <div>
+               <h3>Ecosystem Website</h3>
+               <p>Let us love and protect the diversity of creatures we have in this world</p>
+                <!-- <a href="https://github.com/Daniel-Kenan/Eco" class="source-code" target="_blank"></a>
+            <a href='https://ecosystem-3727a.web.app' class="hosting" target="_blank"></a> -->
+           </div>
+       </div> 
+       <div class="col items javascript">
+           <img src="images/construction.gif" class="construction"> 
+           <div>
+               <h3>Construction Web-app</h3>
+               <p>Promoting a Swazi-land Construction Company</p> 
+               <!-- <a  href='https://github.com/Daniel-Kenan/Construction-Site.git' class="source-code" target="_blank"></a>
+            <a  href='http://construction-boys.herokuapp.com' class="hosting" target="_blank"></a> -->
+           </div>
+       </div>
+       <div class="col items javascript">
+           <img src="images/racing.gif" class="race"> 
+           <div>
+               <h3>Traffic racing game</h3>
+               <p>Enjoy roaming on the highway but avoid collision.</p>
+                <!-- <a  href= 'https://github.com/Daniel-Kenan/racing-game_js.git' class="source-code" target="_blank"></a>
+            <a  href='http://dan-race.herokuapp.com' class="hosting" target="_blank"></a> -->
+           </div>
+       </div>
+       
+      
+       
+       <div class="col items python">
+           <img src="images/music.gif" class="music"> 
+           <div>
+                <!-- <a href='https://github.com/Daniel-Kenan/Music-Player.git' class="source-code" style="width: 100%;" target="_blank"></a> -->
+                <h3 >Music Player</h3>
+                <p>Play music using your local file system </p>
+            </div>
+       </div> 
+
+
+       <div class="col items python">
+        <img src="images/sms.png" class="WUMS"> 
+        
+        <!-- <div> <a href='https://github.com/Daniel-Kenan/Music-Player.git' class="source-code" style="width: 100%;" target="_blank"></a>
+      </div> -->
+      <div>
+        <h3 >Website User Management System</h3>
+        <p>With this technology you can mail all subscribed users after publishing new content.</p>
+      </div>
     </div> 
-    <div class="col">
-        <img src="images/construction.gif"> 
-        <div> <a  href='https://github.com/Daniel-Kenan/Construction-Site.git' class="source-code" target="_blank"></a>
-         <a  href='http://construction-boys.herokuapp.com' class="hosting" target="_blank"></a>
-        </div>
     </div>
-    <div class="col">
-        <img src="images/racing.gif"> 
-        <div> <a  href= 'https://github.com/Daniel-Kenan/racing-game_js.git' class="source-code" target="_blank"></a>
-         <a  href='http://dan-race.herokuapp.com' class="hosting" target="_blank"></a>
-        </div>
+  
     </div>
     
-   
-    
-    <div class="col">
-        <img src="images/music.gif"> 
-        <div> <a href='https://github.com/Daniel-Kenan/Music-Player.git' class="source-code" style="width: 100%;" target="_blank"></a>
-        </div>
-    </div> 
-        <br><br><br><br><br><br><br> 
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <div class="ball"></div> 
+    <div class="pre-footer">
+        <a href="/Daniel's Resume.pdf" class="resume" download >
+          <i class="fas fa-download">  </i> <span style="font-family: Dela Gothic one;font-weight: thin;"> MY RESUME</span>
+        </a>
+        
+      </div>
     <%- include('partials/footer') %>
-    
+    <script>
+        function home(){
+            location.href = '/';
+        }
+    </script>
     <script src="/javascripts/index.js"></script>
     <script src="/javascripts/scroll.js"></script>
     <script>
         AOS.init();
+    </script>
+   
+    
+    <script>
+        $(document).ready(function(){
+            const animation_duration = 500;
+             const _blank = "_blank";
+            $('.curate').click(function(){
+                open('http://chef-recipe.herokuapp.com ' , _blank)
+            })
+            $('.construction').click(function(){
+                open("https://construction-boys.herokuapp.com",_blank)
+            })
+           $('.music').click(function(){
+               open('https://github.com/Daniel-Kenan/Music-Player.git', _blank)
+           })
+           $('.ecosystem').click(function(){
+               open('https://ecosystem-3727a.web.app',_blank)
+           })
+           $(".race").click(function(){
+               open('http://dan-race.herokuapp.com',_blank)
+           })
+           $('.WUMS').click(function(){
+            $('https://github.com/Daniel-Kenan/Website-User-Management-System.git',_blank)
+               
+           })
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if(value == 'All'){
+                    $('.col').show(animation_duration)
+                }
+                else{
+                    
+                    $('.col').not('.'+value).hide(animation_duration);
+                    $('.col').filter('.'+value).show(animation_duration);
+                }
+            })
+
+            $('.list').click(function(){
+                // alert("hello")
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        })
     </script>
 </body>
 

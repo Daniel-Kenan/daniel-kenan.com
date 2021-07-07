@@ -1,41 +1,13 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
-
-<style>
-    .header-menu {
-        display: block;
-        /* background-color: brown; */
-        height: 70px;
-        width: 100%;
-        padding: 3px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       
-    }
-
-    .header-menu a {
-        color: black;
-        font-family: 'Dela Gothic One';
-        text-decoration: none;
-        float: right;
-        margin: 4px;
-        border-radius: 5px;
-        padding: 2px;
-        font-weight: bolder;
-        font-size: clamp(10px,2.5vw,18px); 
-
-    }
-
-    .header-menu a:hover {
-        border-color: white;
-        color:#f4a261;
-
-
-        /* background-color: slateblue; */
-    }
-</style>
-<div class="header-menu">
-    <img src="/images/" alt="">
-    <span class="animate" style="color: #a2d2ff;font-size: clamp(20px,3vw,35px);"><b>daniel-kenan</b> </span>
-    <a href="javascript:history.back()">BACK</a><a href="/blog">BLOG</a>
-
-
-</div>
+<div class="menu" data-aos="fade-left">
+    <a href="/blog">BLOG</a>
+    <a href="/#projects">PROJECTS</a>
+       <a href="/#skills">SKILLS</a>
+       <a href="/#about">ABOUT</a>
+       <img src="/images/t.png" onclick="home()">
+       </div><br><br>
+<script>
+        function home(){
+            location.href = '/';
+        }
+</script>
