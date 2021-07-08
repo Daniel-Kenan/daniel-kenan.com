@@ -19,7 +19,9 @@ app.get('/', (req, res) => {
 app.get('/home', (req, res) => {
     res.render('index')
 })
-
+app.get('/resume',(req,res)=>{
+    res.render('resume')
+})
 
 
 app.get('/blog/:page', (req, res)=>{
