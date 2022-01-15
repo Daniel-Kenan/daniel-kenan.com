@@ -23,11 +23,23 @@ app.get('/resume',(req,res)=>{
     res.render('resume')
 })
 
+app.get('/preview/:project_name',(req,res)=>{
+    const {project_name} = req.params;
+    const name = project_name
+    const pages = ['curate','racing','construction', 'eco','portfolio']
+    
+    if(pages.includes(name)) res.render(name)
+    else {res.redirect('/')}
+})
+
+
+
 
 app.get('/blog/:page', (req, res)=>{
+    // res.redirect('https://medium.com/@sdanielkenan')
     let menu = req.query;
     menu = Object.keys(menu).length == true ? true : false ;
-    
+   
     if (req.params.page == "story")  res.render('story',{menu:menu}); 
     if (req.params.page == "git")  res.render('git',{menu:menu});
     if (req.params.page == "network")  res.render('Networking4SoftwareEngineers',{menu:menu});
@@ -36,7 +48,7 @@ app.get('/blog/:page', (req, res)=>{
 })
     
 app.get('/blog' , (req, res)=>{
-    res.render('blog');
+    res.redirect('https://medium.com/@sdanielkenan')
 })
 
 app.listen(port);

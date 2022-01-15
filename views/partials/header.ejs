@@ -1,13 +1,99 @@
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">    
 <link rel="stylesheet" href="/stylesheets/style.css">
-<div class="menu" data-aos="fade-left">
-    <a href="/blog">BLOG</a>
-    <a href="/#projects">PROJECTS</a>
-       <a href="/#skills">SKILLS</a>
-       <a href="/#about">ABOUT</a>
-       <img src="/images/t.png" onclick="home()"  class="logo-icon">
-       </div><br><br>
+
+<div class="menu" >
+    <!-- <a href="" style="font-size: medium;border: 0;"><i class="fas fa-th"></i></a> -->
+     <a href="/blog" class="desktop" style="width:90px;text-align: center;" target="_blank"> Blog</a>
+     
+        <a href="https://www.youtube.com/channel/UCnuydCHfvXiKH8wpFVHhJ2A" target="_blank" class="desktop"  style="width: 90px;text-align: center;">Youtube</a>
+        <a onclick="Donations()" class="desktop" style="width:90px;text-align: center;"> Donations</a>
+        <a onclick="hire()" class="desktop" style="width:90px;text-align: center;">Hire</a>
+        <a href="/#projects" class="desktop" style="width:90px;text-align: center;"> Projects </a>
+        <a href="/#about" class="desktop"  style="width: 90px;text-align: center;">Skills</a>
+        
+        
+
+<!-- 
+
+ -->
+ <div class="dropdown mobile" style="float: right;">
+    <button onclick="myFunction()" class="dropbtn" ><i class="fas fa-bars" style="font-size: x-large;"></i></button>
+    <div id="myDropdown" class="dropdown-content"> 
+        <a href="/#about"  style="float: none;">ABOUT</a>
+        <a href="/#skills"  style="float: none;">SKILLS</a>
+        <a href="/#projects" style="float: none;">WORK</a>
+        <a href="https://www.youtube.com/channel/UCnuydCHfvXiKH8wpFVHhJ2A" style="float: none;" >YOUTUBE</a>
+        <a href="/resume" style="float: none;">RESUME</a>
+        <a href="/blog" class="desktop" style="width:90px;text-align: center;"> BLOG</a>
+        <a href="/blog" class="desktop" style="width:90px;text-align: center;"> Donations</a>
+       
+    </div>
+  </div>
+
+
+<!-- 
+ -->
+ <!-- <a href="https://iconscout.com/icons/hundred-full-score" target="_blank">Hundred Icon</a> by <a href="https://iconscout.com/contributors/twitter-inc" target="_blank">Twitter Emoji</a>     -->
+        <img src="/images/hundred.png" style="display:block; width: 45px;height: auto;" onclick="home()" class="logo-icon">
+
+    </div> <br><br>
 <script>
         function home(){
             location.href = '/';
         }
+
+
+        function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 </script>
+<script>
+  function hire(){
+    Swal.fire({
+  title: 'Type of work',
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: '<i class="fab fa-linkedin"></i> Formal',
+  denyButtonText: `<i class="fas fa-wallet"></i> Freelance`,
+}).then((ans) => {
+ 
+  if (ans.isConfirmed) {
+    location.href = 'https://www.linkedin.com/in/daniel-kenan/'
+  } else if (ans.isDenied) {
+    location.href = 'https://www.fiverr.com/daniel_kenan'
+  }
+})
+  }
+  function Donations(){
+    Swal.fire({
+    showCancelButton:true,
+    confirmButtonText:'Donate',
+  title: 'Thank You!',
+  background:'#fff',
+  text: `Any amount is very much appreciated! :-)`,
+  imageUrl: 'https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png',
+  imageAlt: 'Pay-pal logo',
+}).then((donate)=>{
+  if(donate.isConfirmed){
+    location.href = "https://www.paypal.me/DSlinda"
+  }
+})
+  }
+</script>
+<script src="/javascripts/scroll.js"></script>

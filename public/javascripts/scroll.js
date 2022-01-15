@@ -1,13 +1,13 @@
 
-let prevScrollpos = window.pageYOffset,
+let prevScrollpos = pageYOffset,
 header = document.getElementsByClassName('menu')[0];
 window.onscroll = () => {
-    var currentScrollPos = window.pageYOffset;
+    var currentScrollPos = pageYOffset;
 
     if (prevScrollpos > currentScrollPos) {
-        header.style.top = "0";
+        header.style.opacity = "1";
     } else {
-        header.style.top = "-100px";
+        header.style.opacity = "0.71";
         
         // menu_opt.setAttribute("src","/images/PinClipart.com_menu-clip-art_1128307.png");
     }
