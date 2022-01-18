@@ -1,7 +1,10 @@
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">    
 <link rel="stylesheet" href="/stylesheets/style.css">
+<style>
+  .dropdown-content{display: none;}
+</style>
 
 <div class="menu" >
     <!-- <a href="" style="font-size: medium;border: 0;"><i class="fas fa-th"></i></a> -->
@@ -13,37 +16,32 @@
         <a href="/#projects" class="desktop" style="width:90px;text-align: center;"> Projects </a>
         <a href="/#about" class="desktop"  style="width: 90px;text-align: center;">Skills</a>
         
-        
-
-<!-- 
-
- -->
- <div class="dropdown mobile" style="float: right;">
-    <button onclick="myFunction()" class="dropbtn" ><i class="fas fa-bars" style="font-size: 38px;" ></i></button>
-    <div id="myDropdown" class="dropdown-content"> 
-        <!-- <a href="/#about"  style="float: none;">ABOUT</a>
-        <a href="/#skills"  style="float: none;">SKILLS</a>
-        <a href="/#projects" style="float: none;">WORK</a>
-        <a href="https://www.youtube.com/channel/UCnuydCHfvXiKH8wpFVHhJ2A" style="float: none;" >YOUTUBE</a>
-        <a href="/resume" style="float: none;">RESUME</a>
-        <a href="/blog" class="desktop" style="width:90px;text-align: center;"> BLOG</a>
-        <a href="/blog" class="desktop" style="width:90px;text-align: center;"> Donations</a> -->
-       
-    </div>
-  </div>
 
 
-<!-- 
- -->
+<!--  -->
+<div class="dropdown mobile" >
+  <button onclick="myFunction()" class="dropbtn" style="float: right;">
+    <i class="fas fa-bars" style="font-size: 38px;" ></i>
+  </button>
+</div>
  <!-- <a href="https://iconscout.com/icons/hundred-full-score" target="_blank">Hundred Icon</a> by <a href="https://iconscout.com/contributors/twitter-inc" target="_blank">Twitter Emoji</a>     -->
-        <img src="/images/hundred.png" style="display:block; width: 44px;height: auto;" onclick="home()" class="logo-icon">
-
-    </div> <br><br>
+<img src="/images/hundred.png" style="display:block; width: 44px;height: auto;" onclick="home()" class="logo-icon">
+  <div  class="dropdown-content" style="float: right;"> 
+  <a href="/resume" style="float: none;"> My Resume</a>
+  <a href="/#skills"  style="float: none;"> Skills</a>
+  <a href="/#projects" style="float: none;"> Projects</a>
+  <a href="https://www.youtube.com/channel/UCnuydCHfvXiKH8wpFVHhJ2A"> Youtube Channel</a>
+  <a href="/blog" class="desktop"> Blog</a>
+  <a onclick="hire()" style="float: none;"> Hire</a>
+  <a onclick="Donations()" class="desktop" > Donate</a>
+  </div>
+<!--  -->    
+    </div>
+     <br><br>
 <script>
         function home(){
             location.href = '/';
         }
-
 
         function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -95,5 +93,13 @@ window.onclick = function(event) {
   }
 })
   }
+$(document).ready(function(){
+  $('.dropbtn').click(function(){
+        $('.dropdown-content').slideToggle(500)
+    });
+   
+})
+    
+  
 </script>
 <script src="/javascripts/scroll.js"></script>
