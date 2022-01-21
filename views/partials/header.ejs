@@ -63,7 +63,12 @@ window.onclick = function(event) {
 </script>
 <script>
   function hire(){
-    Swal.fire({
+    
+    $(document).ready(()=>{
+      $('.dropdown-content').slideToggle(500)
+    })
+
+  Swal.fire({
   title: 'Type of work',
   showDenyButton: true,
   showCancelButton: true,
@@ -79,6 +84,11 @@ window.onclick = function(event) {
 })
   }
   function Donations(){
+    
+    $(document).ready(()=>{
+      $('.dropdown-content').slideToggle(500)
+    })
+
     Swal.fire({
     showCancelButton:true,
     confirmButtonText:'Donate',
