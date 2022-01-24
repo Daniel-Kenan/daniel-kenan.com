@@ -11,8 +11,8 @@
      <a href="/blog" class="desktop" style="width:90px;text-align: center;" target="_blank"> Blog</a>
      
         <a href="https://www.youtube.com/channel/UCnuydCHfvXiKH8wpFVHhJ2A" target="_blank" class="desktop"  style="width: 90px;text-align: center;">Youtube</a>
-        <a onclick="Donations()" class="desktop" style="width:90px;text-align: center;"> Donations</a>
-        <a onclick="hire()" class="desktop" style="width:90px;text-align: center;">Hire</a>
+        <a onclick="Donations(null)" class="desktop" style="width:90px;text-align: center;"> Donations</a>
+        <a onclick="hire(null)" class="desktop" style="width:90px;text-align: center;">Hire</a>
         <a href="/#projects" class="desktop" style="width:90px;text-align: center;"> Projects </a>
         <a href="/#about" class="desktop"  style="width: 90px;text-align: center;">Skills</a>
         
@@ -32,8 +32,8 @@
   <a href="/#projects" style="float: none;"> Projects</a>
   <a href="https://www.youtube.com/channel/UCnuydCHfvXiKH8wpFVHhJ2A"> Youtube Channel</a>
   <a href="/blog" class="desktop"> Blog</a>
-  <a onclick="hire()" style="float: none;"> Hire</a>
-  <a onclick="Donations()" class="desktop" > Donate</a>
+  <a onclick="hire(true)" style="float: none;"> Hire</a>
+  <a onclick="Donations(true)" class="desktop" > Donate</a>
   </div>
 <!--  -->    
     </div>
@@ -62,11 +62,12 @@ window.onclick = function(event) {
 }
 </script>
 <script>
-  function hire(){
+  function hire(arg){
     
+    if(arg)
     $(document).ready(()=>{
       $('.dropdown-content').slideToggle(500)
-    })
+    });
 
   Swal.fire({
   title: 'Type of work',
@@ -83,11 +84,13 @@ window.onclick = function(event) {
   }
 })
   }
-  function Donations(){
+  function Donations(arg){
     
-    $(document).ready(()=>{
-      $('.dropdown-content').slideToggle(500)
-    })
+   if(arg)
+   $(document).ready(()=>{
+      $('.dropdown-content').slideToggle(500);
+      console.log(document.querySelector('.mobile').getAttribute('style'))
+    });
 
     Swal.fire({
     showCancelButton:true,
