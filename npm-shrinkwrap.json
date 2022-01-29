@@ -260,7 +260,8 @@
         "colorette": "^1.2.2",
         "fraction.js": "^4.1.1",
         "normalize-range": "^0.1.2",
-        "postcss-value-parser": "^4.1.0"
+        "postcss-value-parser": "^4.1.0",
+        "browsers":"['last 2 version','>1%']"
       }
     },
     "bach": {
