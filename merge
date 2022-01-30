@@ -1,0 +1,15 @@
+#! /usr/bin/python3
+
+from PyPDF2 import PdfFileMerger
+import os 
+
+pdf_list = ['resume','pcap','netcisco' ]
+pdf_list = list(map(lambda x: './public/pdf_list/' + x + '.pdf', pdf_list))
+print(pdf_list)
+
+merger = PdfFileMerger()
+
+for pdf in pdf_list:
+    merger.append(pdf)
+
+merger.write("./public/Daniel's Resume.pdf")

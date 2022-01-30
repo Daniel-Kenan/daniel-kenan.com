@@ -4,3 +4,5 @@ passwords.py
 folder
 /stylesheets
 gulpfile.js
+./merge
+./public/pdf_list
