@@ -1,0 +1,30 @@
+#! /usr/bin/python3
+
+from ast import arguments
+import sys, os
+from PyPDF2 import PdfFileMerger
+import PyPDF2
+
+
+arguments = sys.argv[1:]
+
+print(arguments)
+angle = 0 
+
+if 'rotate' in arguments: 
+     angle = arguments[arguments.index("rotate")+1]
+     angle = int(angle)
+     
+    
+with open("./public/Daniel's Resume.pdf", 'rb') as pdf_in :
+    pdf_reader = PyPDF2.PdfFileReader(pdf_in)
+    pdf_writer = PyPDF2.PdfFileWriter()
+
+    for pagenum in range(pdf_reader.numPages):
+        page = pdf_reader.getPage(pagenum)
+        page.rotate_clockwise(angle)
+        pdf_writer.addPage(page)
+
+    with open('test.pdf','wb') as pdf_out:
+        pdf_writer.write(pdf_out)
+             

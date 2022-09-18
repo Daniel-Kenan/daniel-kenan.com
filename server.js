@@ -13,6 +13,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({
     extended: false
 }))
+app.get('/testing',(req,res)=>{
+    res.send('name:kenan')
+})
 app.get('/', (req, res) => {
     res.render('index')
 })

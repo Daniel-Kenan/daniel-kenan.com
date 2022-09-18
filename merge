@@ -3,13 +3,19 @@
 from PyPDF2 import PdfFileMerger
 import os 
 
-pdf_list = ['resume','pcap','netcisco' ]
-pdf_list = list(map(lambda x: './public/pdf_list/' + x + '.pdf', pdf_list))
-print(pdf_list)
+DIRECTORY = './public/pdf_list/'
+
+files = os.listdir(DIRECTORY)
+files.remove('resume.pdf')
+print(files)
+
+
+files = ['resume.pdf'] + files
+path = list(map(lambda filename: DIRECTORY + filename, files ))
 
 merger = PdfFileMerger()
 
-for pdf in pdf_list:
+for pdf in path:
     merger.append(pdf)
 
 merger.write("./public/Daniel's Resume.pdf")
